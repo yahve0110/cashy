@@ -144,7 +144,19 @@
   padding-bottom: 20px;
 }
 
-@media (max-width: 380px) {
+.tabContent {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 400px) {
   .tabContent {
     height: 300px;
 
