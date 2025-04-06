@@ -9,6 +9,7 @@
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 
   display: flex;
   flex-shrink: 0;
@@ -19,7 +20,9 @@
 }
 
 .selected {
-  border: 2px solid var(--primary-color);
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
+  border: none;
 }
 
 .locked {
@@ -74,13 +77,13 @@
   font-weight: 400;
   color: black;
 }
-
 .selectedTag {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 53px;
-  height: 64px;
+  right: -4px;
+  top: -3px;
+  width: 56px;
+  height: 67px;
+  overflow: visible
 }
 
 .selectedIcon {
