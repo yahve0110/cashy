@@ -12,7 +12,11 @@
   z-index: 999;
   padding: 16px;
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+.customOverlay {
+  overflow: visible;
+  padding: 0;
 }
 
 .modal {
@@ -28,6 +32,17 @@
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
+}
+
+.customModal {
+  max-width: none;
+  max-height: none;
+  transform: none;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
 }
 
 .modalEnter {

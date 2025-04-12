@@ -7,6 +7,7 @@ type ModalProps = {
   onClose: () => void;
   children: React.ReactNode;
   hideCloseButton?: boolean;
+  customStyle?: boolean;
 };
 
 const Modal = ({
@@ -14,6 +15,7 @@ const Modal = ({
   onClose,
   children,
   hideCloseButton = true,
+  customStyle = false,
 }: ModalProps) => {
   const [animateIn, setAnimateIn] = useState(false);
 
@@ -34,9 +36,9 @@ const Modal = ({
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <div className={styles.overlay} onClick={onClose}>
+    <div className={`${styles.overlay} ${customStyle ? styles.customOverlay : ""}`} onClick={onClose}>
       <div
-        className={`${styles.modal} ${animateIn ? styles.modalEnter : ""}`}
+        className={`${styles.modal} ${animateIn ? styles.modalEnter : ""} ${customStyle ? styles.customModal : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}
