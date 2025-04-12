@@ -1,115 +1,78 @@
 .modalContent {
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   background: #ffffff;
   border-radius: 20px;
   width: 100%;
-  max-width: 480px;
   overflow: hidden;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 60dvh;
-    padding: 0;
-    border-radius: 0;
-  }
 }
 
 .modalInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  padding: 24px;
+  padding: 5px;
   width: 100%;
-
-  @media (max-width: 600px) {
-    transform: rotate(90deg);
-    transform-origin: center;
-    width: 100dvh;
-    height: auto;
-    padding: 16px;
-  }
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 27px;
+  font-weight: 600;
   text-align: center;
-
-  @media (max-width: 600px) {
-    text-align: left;
-    align-self: flex-start;
-  }
 }
 
 .refreshInfo {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  color: #666;
+  font-weight: 500;
+  gap: 6px;
+  margin-bottom: 30px;
   width: 100%;
-
-  @media (max-width: 600px) {
-    justify-content: flex-start;
-  }
 }
 
-.timer {
-  margin-left: 5px;
-  display: inline-flex;
+.refreshRight {
+  display: flex;
   align-items: center;
+  gap: 6px;
+}
 
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url("../assets/icons/clock.svg");
-    background-size: contain;
-    margin-right: 4px;
-  }
+.refreshText {
+  color: var(--secondaryText);
 }
 
 .row {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  gap: 2px;
   width: 100%;
-
-  @media (max-width: 600px) {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-  }
 }
 
 .left {
+  border-radius: 10px;
   display: flex;
+  background: #e6f8f9;
   flex-direction: column;
   align-items: center;
   text-align: center;
   flex: 1;
-
-  @media (max-width: 600px) {
-    align-items: flex-start;
-    text-align: left;
-    justify-content: center;
-    width: 58%;
-  }
+  padding: 45px 10px;
 }
 
 .description {
-  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: black;
 }
 
 .button {
-  padding: 10px 18px;
-  background-color: #00c184;
-  color: white;
+  padding: 10px 40px;
+  background-color: var(--text-item);
+  color: black;
   border: none;
+  margin-top: 33px;
   border-radius: 100px;
   font-weight: 600;
   font-size: 14px;
@@ -119,47 +82,132 @@
 
 .right {
   flex: 1;
-  background: #9f6efb;
+  background: var(--purple);
   border-radius: 14px;
-  padding: 16px;
-  color: white;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 600px) {
-    height: auto;
-    width: 40%;
-    padding: 12px;
-  }
 }
 
-.perksTitle {
+.monemon {
+  width: 210px;
+  margin-bottom: 20px;
+}
+
+.modalUpperText {
   font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.perkLabel {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 8px;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .perkList {
   display: flex;
-  gap: 12px;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-top: 8px;
 
-  img {
-    width: 42px;
-    height: 42px;
-
-    @media (max-width: 600px) {
-      width: 36px;
-      height: 36px;
-    }
+  @media (max-width: 480px) {
+    overflow-x: auto;
+    flex-wrap: nowrap;
   }
 }
+
+.perkItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
+
+.perkContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    height: auto;
+  }
+}
+
+.silverCoin{
+  width: 70px;
+  height: 70px;
+}
+
+.perkBonus{
+  position: absolute;
+  width: 36px;
+  height: auto;
+  bottom: 0;
+  right: -24px;
+  transform: translateX(-50%);
+}
+
+.perkDouble,
+.perkDoubleWhite {
+  position: absolute;
+  width: 24px;
+  height: auto;
+  bottom: 0;
+  right: -10px;
+  transform: translateX(-50%);
+}
+
+.perkTextContainer {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #0e0d0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4px;
+
+  span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background-color: #aab7cd;
+    border-radius: 2px;
+    transform-origin: center;
+  }
+}
+
+.line1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.line2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+

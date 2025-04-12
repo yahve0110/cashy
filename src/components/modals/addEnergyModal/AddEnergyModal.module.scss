@@ -1,5 +1,5 @@
 .modalWrapper {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -7,7 +7,7 @@
     left: 50%;
     top: 50%;
     transform: rotate(90deg) translateY(-50%) translateX(-50%);
-    transform-origin: center;
+    transform-origin: left top;
     z-index: 1000;
     margin: 0;
   }
@@ -16,147 +16,144 @@
 .modalContent {
   border: none;
   overflow: hidden;
-  background: white;
   border-radius: 20px;
   position: relative;
   width: 100%;
-  padding: 16px;
+  height: 100%;
 }
 
 .modalInner {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  height: 100%;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-  color: #333;
-}
-
-.refreshInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  color: #666;
-  gap: 4px;
-  margin-bottom: 8px;
-}
-
-.row {
-  display: flex;
-  gap: 12px;
-}
-
-.left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background: #F5FCFF;
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.description {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 12px;
-}
-
-.button {
-  padding: 8px 16px;
-  background: #00C184;
-  color: white;
-  border: none;
-  border-radius: 100px;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.right {
-  flex: 1;
-  background: #9F6EFB;
-  border-radius: 12px;
-  padding: 16px;
-  color: white;
+.modalUpper {
+  background: var(--purple);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  justify-content: center;
 }
 
-.perksTitle {
-  font-size: 13px;
+.monemon {
+  margin-bottom: 20px;
+}
+
+.modalUpperText {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.bottomContent {
+  display: flex;
+  background: white;
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 40px 40px;
+}
+
+.bottomContentText {
+  margin-bottom: 40px;
   font-weight: 500;
-  margin-bottom: 2px;
+  font-size: 18px;
 }
 
-.perkLabel {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
+.perkContainer {
+  position: relative;
+}
+
+.lightningIcon {
+  width: 50px;
+  height: 65px;
+}
+
+.perkBonus {
+  width: 42px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 30%;
+}
+
+.perkTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
 }
 
 .perks {
   display: flex;
-  gap: 16px;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-.perk {
+.perkDouble {
+  width: 32px;
+  height: auto;
+  position: absolute;
+  bottom: 5px;
+  left: 40%;
+}
+
+.silverCoin {
+  width: 70px;
+  height: 70px;
+}
+
+.perkDoubleWhite {
+  width: 32px;
+  height: auto;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+
+.perkColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
   text-align: center;
+  min-width: 90px;
+}
 
-  img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-  }
-
-  &::after {
-    content: attr(data-label);
-    font-size: 10px;
-    color: white;
-    opacity: 0.9;
-    white-space: nowrap;
-  }
+.greenBgIcon {
+  width: 65px;
+  height: 65px;
 }
 
 .closeButton {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 5px;
+  right: 5px;
   background: transparent;
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   z-index: 2;
-  padding: 0;
+
+  @media (max-width: 768px) {
+    transform: rotate(90deg);
+  }
 
   &:hover {
     opacity: 0.8;
   }
-}
 
-.line1, .line2 {
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background: #999;
-  top: 50%;
-  left: 50%;
-  border-radius: 2px;
+  span {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+    transform-origin: center;
+  }
 }
 
 .line1 {
