@@ -1,11 +1,28 @@
+.modalWrapper {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: rotate(90deg) translateY(-50%) translateX(-50%);
+    transform-origin: left top;
+    z-index: 1000;
+    margin: 0;
+    width: 600px;
+  }
+}
+
 .modalContent {
   display: flex;
-
   align-items: center;
   background: #ffffff;
   border-radius: 20px;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .modalInner {
@@ -190,6 +207,10 @@
   border: none;
   cursor: pointer;
   z-index: 10;
+
+  @media (max-width: 768px) {
+    transform: rotate(-90deg);
+  }
 
   span {
     position: absolute;
