@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+
 }
 
 .header {
+  margin-top: 34px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .userInfo {
@@ -19,37 +22,77 @@
 }
 
 .avatar {
-  width: 29px;
-  height: 29px;
+  width: 42px;
+  height: 42px;
   border-radius: 5px;
   object-fit: cover;
 }
 
 .username {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
   letter-spacing: 1.2px;
-  color: var(--secondaryText);
+}
+.rightPart {
+  display: flex;
+  gap: 30px;
 }
 
-.energy {
+.containerEnergy {
   position: relative;
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   padding: 1px 25px;
   font-weight: 600;
   line-height: 124%;
   border-radius: 4px;
+}
 
+.timerUnderEnergy {
+  position: absolute;
+  bottom: -25px;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--secondaryText);
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.containerCoins {
+  position: relative;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 1px 20px;
+  font-weight: 600;
+  line-height: 124%;
+  border-radius: 4px;
+}
+.coinsIcon {
+  position: absolute;
+  left: -8px;
+  top: 55%;
+  transform: translateY(-56%);
+  width: 25px;
+  height: 27px;
+}
+
+.coinsAmount {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
 }
 
 .lightningIcon {
   position: absolute;
   left: -8px;
-  top: 50%;
+  top: 60%;
   transform: translateY(-56%);
   width: 20px;
   height: 29px;
@@ -59,11 +102,77 @@
   margin-left: 0;
 }
 
+.addEnergy {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: var(--text-item);
+  cursor: pointer;
+}
 
 .title {
   text-align: center;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+.gamesHeader {
+  text-align: center;
+
+  .timerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.newGamesText {
+  color: var(--secondaryText);
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+
+  span {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .games {
@@ -72,21 +181,39 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-
-
 }
 
-.lightningIcon{
+.lightningIcon {
   width: 21px;
   height: 29px;
 }
 
-.gameCard {
-  background-color: var(--background-secondary);
-  padding: 16px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+.games {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 10px;
+  justify-content: center;
+
+  max-width: 410px;
+  margin: 0 auto;
+
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  padding-right: 8px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
+
+
+
+
+
+
+

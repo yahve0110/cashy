@@ -1,0 +1,139 @@
+.modalContent {
+  border: none;
+    overflow: hidden;
+  
+  }
+  
+  .modalUpper{
+    background: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+  }
+  
+  .monemon{
+    margin-bottom: 20px;
+  }
+  
+  .modalUpperText{
+    font-weight: 600;
+    margin-bottom: 10px;
+  
+  }
+  
+  .bottomContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px 40px 40px;
+  
+  }
+  
+  .bottomContentText{
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .perkContainer{
+    position: relative;
+  }
+  
+  .lightningIcon{
+    width: 50px;
+    height: 65px;
+  }
+  .perkBonus {
+    width: 42px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 30%;
+  }
+  
+  .perkTextContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  
+  .perks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .perkDouble{
+    width: 32px;
+    height: auto;
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+  }
+  
+  .silverCoin{
+    width: 70px;
+    height: 70px;
+  }
+  .perkDoubleWhite{
+    width: 32px;
+    height: auto;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+  }
+  
+  .perkColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 90px;
+  }
+  
+  .greenBgIcon{
+    width: 65px;
+    height: 65px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  
+    span {
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      background: white;
+      top: 50%;
+      left: 50%;
+      border-radius: 2px;
+      transform-origin: center;
+    }
+  }
+  
+  .line1 {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .line2 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  

@@ -12,23 +12,41 @@ import music from "@/assets/backgrounds/music.jpg";
 export type BackgroundStatus = "buy" | "owned" | "locked" | "selected";
 
 export type BackgroundItem = {
-    id: string;
-    name: string;
-    image: string;
-    status: BackgroundStatus;
-    price?: number;
-    note?: string;
+  id: string;
+  name: string;
+  image: string;
+  status: BackgroundStatus;
+  price?: number;
+  note?: string;
 };
 
 export const backgroundData: BackgroundItem[] = [
-    { id: "city", name: "City", image: city, status: "selected" },
-    { id: "coffe", name: "Coffee", image: coffe, status: "owned" },
-    { id: "desk", name: "Desk", image: desk, status: "buy", price: 100 },
-    { id: "desk2", name: "Desk 2", image: desk2, status: "locked", note: "Could be obtained from event" },
-    { id: "field", name: "Field", image: field, status: "buy", price: 100 },
-    { id: "field2", name: "Field 2", image: field2, status: "owned" },
-    { id: "forest", name: "Forest", image: forest, status: "owned" },
-    { id: "forestSunSet", name: "Forest Sunset", image: forestSunSet, status: "buy", price: 100 },
-    { id: "mountains", name: "Mountains", image: mountains, status: "locked", note: "Limited edition" },
-    { id: "music", name: "Music", image: music, status: "buy", price: 100 },
+  { id: "city", name: "City", image: city, status: "selected" },
+  { id: "coffe", name: "Coffee", image: coffe, status: "owned" },
+  { id: "desk", name: "Desk", image: desk, status: "buy", price: 100 },
+  {
+    id: "desk2",
+    name: "Desk 2",
+    image: desk2,
+    status: "locked",
+    note: "Could be obtained from event",
+  },
+  { id: "field", name: "Field", image: field, status: "buy", price: 100 },
+  { id: "field2", name: "Field 2", image: field2, status: "owned" },
+  { id: "forest", name: "Forest", image: forest, status: "owned" },
+  {
+    id: "forestSunSet",
+    name: "Forest Sunset",
+    image: forestSunSet,
+    status: "buy",
+    price: 100,
+  },
+  {
+    id: "mountains",
+    name: "Mountains",
+    image: mountains,
+    status: "locked",
+    note: "Limited edition",
+  },
+  { id: "music", name: "Music", image: music, status: "buy", price: 100 },
 ];
