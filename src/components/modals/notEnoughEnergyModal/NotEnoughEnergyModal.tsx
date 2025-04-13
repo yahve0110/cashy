@@ -34,13 +34,18 @@ const NotEnoughEnergyModal = ({
               <span className={styles.refreshText}>REFRESH IN: </span>
               <div className={styles.refreshRight}>
                 <img src={alarmIcon} alt="alarmIcon" />
-                <CountdownText targetTime={gameTargetRef.current!} format="hms" />
+                <CountdownText
+                  targetTime={gameTargetRef.current!}
+                  format="hms"
+                />
               </div>
             </div>
 
             <div className={styles.row}>
               <div className={styles.left}>
-                <span className={styles.description}>Go to Players to send</span>
+                <span className={styles.description}>
+                  Go to Players to send
+                </span>
                 <span className={styles.description}> and receive energy!</span>
                 <button className={styles.button}>Go to Players</button>
               </div>
@@ -52,10 +57,15 @@ const NotEnoughEnergyModal = ({
                   <div className={styles.perkItem}>
                     <div className={styles.perkContainer}>
                       <img
+                        alt={"lightningIcon"}
                         className={styles.lightningIcon}
                         src={ICONS.lightning}
                       />
-                      <img className={styles.perkBonus} src={twentyFive} />
+                      <img
+                        alt={"twentyFive"}
+                        className={styles.perkBonus}
+                        src={twentyFive}
+                      />
                     </div>
                     <div className={styles.perkTextContainer}>
                       <span>25 energy</span>
@@ -105,11 +115,10 @@ const NotEnoughEnergyModal = ({
             </div>
           </div>
           <button className={styles.closeButton} onClick={onClose}>
-          <span className={styles.line1}></span>
-          <span className={styles.line2}></span>
-        </button>
+            <span className={styles.line1}></span>
+            <span className={styles.line2}></span>
+          </button>
         </div>
-  
       </div>
     </Modal>
   );

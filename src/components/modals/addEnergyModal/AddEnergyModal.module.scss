@@ -87,8 +87,51 @@
 .perks {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    gap: 16px;
+  }
+}
+
+.perks > div {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 50px;
+  width: 80px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.perkContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 50px;
+    height: auto;
+  }
+}
+
+.perkTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.1;
+  margin-top: 6px;
+  min-height: 32px;
+
+  span {
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+  }
 }
 
 .perkDouble {

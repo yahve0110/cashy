@@ -113,12 +113,6 @@
   margin-bottom: 20px;
 }
 
-.modalUpperText {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
 .perkList {
   display: flex;
   justify-content: center;
@@ -126,10 +120,19 @@
   flex-wrap: nowrap;
   gap: 12px;
   margin-top: 8px;
+  overflow-x: auto;
 
   @media (max-width: 480px) {
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
   }
 }
 
@@ -140,6 +143,7 @@
   text-align: center;
   min-width: 70px;
   flex-shrink: 0;
+  max-width: 80px;
 }
 
 
@@ -187,13 +191,19 @@
   color: #0e0d0d;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   margin-top: 4px;
+  max-width: 80px;
 
   span {
     display: block;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
   }
 }
 
