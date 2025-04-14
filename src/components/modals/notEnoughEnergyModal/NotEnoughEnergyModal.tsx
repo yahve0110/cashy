@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { GAME_UPDATE_INTERVAL_MS } from "@/config";
 import monemon from "@/assets/icons/monemon.png";
 import lightning from "@/assets/icons/lightning.svg";
-import twentyFive from "@/assets/icons/+25.svg";
+import twentyFive from "@/assets/icons/twentyFive.svg";
 import double from "@/assets/icons/x2green.svg";
 import silverCoin from "@/assets/icons/silverCoin.svg";
 import doubleWhite from "@/assets/icons/x2.svg";
