@@ -53,6 +53,7 @@
 }
 
 .timerUnderEnergy {
+  font-family: "Poppins", sans-serif;
   position: absolute;
   bottom: -25px;
   font-weight: 500;
@@ -148,20 +149,25 @@
   }
 }
 
-.newGamesText {
-  color: var(--secondaryText);
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0.8px;
-  font-size: 18px;
-  margin-right: 10px;
-}
+
+  .newGamesText {
+    font-family: "Poppins", serif;
+    color: var(--secondaryText);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    margin-right: 10px;
+  }
+
+
 
 .timer {
   display: flex;
+  font-family: "Poppins", sans-serif;
+  line-height: 150%;
   align-items: center;
 
-  font-size: 14px;
 
   span {
     display: flex;

@@ -5,11 +5,11 @@ import CountdownText from "@/components/ui/countDown/CountdownText";
 import { useRef } from "react";
 import { GAME_UPDATE_INTERVAL_MS } from "@/config";
 import monemon from "@/assets/icons/monemon.png";
-import { ICONS } from "@/assets/iconComponents/links";
-import twentyFive from "@/assets/icons/+25.png";
-import double from "@/assets/icons/x2.png";
-import silverCoin from "@/assets/icons/silverCoin.png";
-import doubleWhite from "@/assets/icons/x2white.png";
+import lightning from "@/assets/icons/lightning.svg";
+import twentyFive from "@/assets/icons/+25.svg";
+import double from "@/assets/icons/x2green.svg";
+import silverCoin from "@/assets/icons/silverCoin.svg";
+import doubleWhite from "@/assets/icons/x2.svg";
 
 const NotEnoughEnergyModal = ({
   isOpen,
@@ -59,7 +59,7 @@ const NotEnoughEnergyModal = ({
                       <img
                         alt={"lightningIcon"}
                         className={styles.lightningIcon}
-                        src={ICONS.lightning}
+                        src={lightning}
                       />
                       <img
                         alt={"twentyFive"}
@@ -78,7 +78,7 @@ const NotEnoughEnergyModal = ({
                       <img
                         alt={"lightningIcon"}
                         className={styles.lightningIcon}
-                        src={ICONS.lightning}
+                        src={lightning}
                       />
                       <img
                         alt={"perkDoubleIcon"}

@@ -1,5 +1,5 @@
 .modalWrapper {
-  width: 500px;
+  width: 550px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -41,7 +41,9 @@
 
 .modalUpperText {
   font-weight: 600;
-  margin-bottom: 10px;
+  line-height: 150%;
+  font-size: 20px;
+  margin-bottom: 2px;
 }
 
 .bottomContent {
@@ -55,7 +57,9 @@
 }
 
 .bottomContentText {
-  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 36px;
+  line-height: 150%;
   font-weight: 500;
   font-size: 18px;
 }
@@ -73,22 +77,16 @@
   width: 42px;
   height: 20px;
   position: absolute;
-  bottom: 5px;
-  left: 30%;
+  bottom: 0;
+  left: 40%;
 }
 
-.perkTextContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
-}
 
 .perks {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 24px;
+  gap: 40px;
   flex-wrap: wrap;
 
   @media (max-width: 480px) {
@@ -100,7 +98,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
   text-align: center;
   flex-shrink: 0;
 }
@@ -114,14 +111,17 @@
 
 }
 
+
 .perkTextContainer {
   display: flex;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
   flex-direction: column;
   align-items: center;
-  font-size: 12px;
-  line-height: 1.1;
-  margin-top: 6px;
-  min-height: 32px;
+  line-height: 133%;
+  font-size: 13px;
+
+
 
   span {
     display: block;
@@ -135,8 +135,8 @@
   width: 32px;
   height: auto;
   position: absolute;
-  bottom: 5px;
-  left: 40%;
+  bottom: 0;
+  left: 45%;
 }
 
 .silverCoin {
@@ -148,7 +148,7 @@
   width: 32px;
   height: auto;
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   right: 0;
 }
 

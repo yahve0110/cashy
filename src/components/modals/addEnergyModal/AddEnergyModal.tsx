@@ -1,11 +1,11 @@
 import Modal from "@/components/modals/modal/Modal";
 import styles from "./AddEnergyModal.module.scss";
-import { ICONS } from "@/assets/iconComponents/links";
-import twentyFive from "@/assets/icons/+25.png";
+import lightning from "@/assets/icons/lightning.svg";
+import twentyFive from "@/assets/icons/+25.svg";
 import monemon from "@/assets/icons/monemon.png";
-import double from "@/assets/icons/x2.png";
-import doubleWhite from "@/assets/icons/x2white.png";
-import silverCoin from "@/assets/icons/silverCoin.png";
+import double from "@/assets/icons/x2green.svg";
+import doubleWhite from "@/assets/icons/x2.svg";
+import silverCoin from "@/assets/icons/silverCoin.svg";
 import greenBg from "@/assets/icons/greenBg.svg";
 
 const AddEnergyModal = ({
@@ -35,7 +35,7 @@ const AddEnergyModal = ({
                   <div className={styles.perkContainer}>
                     <img
                       className={styles.lightningIcon}
-                      src={ICONS.lightning}
+                      src={lightning}
                       alt="lightningIcon"
                     />
                     <img
@@ -55,7 +55,7 @@ const AddEnergyModal = ({
                     <div className={styles.perkContainer}>
                       <img
                         className={styles.lightningIcon}
-                        src={ICONS.lightning}
+                        src={lightning}
                         alt="lightningIcon"
                       />
                       <img

@@ -1,7 +1,7 @@
 import styles from "./PlayPage.module.scss";
 import GameCard from "@/components/ui/gameCard/GameCard";
 import { ICONS } from "@/assets/iconComponents/links";
-import emptyLightning from "@/assets/icons/lightningEmpty.png";
+import emptyLightning from "@/assets/icons/emptyLightning.svg";
 import { games } from "@/components/playPage/gamesData";
 import avatarImage from "@/assets/avatar.jpg";
 import { useRef, useState } from "react";
